@@ -6,3 +6,6 @@ class Error_message:
 class Thanks_message:
     statment = ("\n" 
                "ご利用ありがとうございました。")
+
+class Exit_message:
+    statment = ('終了します')

@@ -17,8 +17,8 @@ try:
         app1_string = input('昇順に並べ替えますか？ (y/n) ==>')
         app1_amount = int(input('並べ替えしたい数字の数はいくつですか？(2-5)==> '))
 
-        x = Calc_sort()  # インスタンスの生成しxに代入
-        result_1 = x.sort_number(app1_string, app1_amount)  # インスタンスメソッドによって得た戻り値をresult_1に代入
+        app1 = Calc_sort()  # インスタンスの生成しxに代入
+        result_1 = app1.sort_number(app1_string, app1_amount)  # インスタンスメソッドによって得た戻り値をresult_1に代入
         if len(result_1) == 2:  # 戻り値の中身が二つあれば、それぞれ表示。そうでなければ1つだけ表示
             print(result_1[0])
             print(result_1[1])

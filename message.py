@@ -9,3 +9,8 @@ class Thanks_message:
 
 class Exit_message:
     statment = ('終了します')
+
+class Name_error_message:
+    statment = ('！！！！！！！！！！！！！！！！！！！\n'
+                '名前の入力がなかったため、処理を終了します。\n'
+                '！！！！！！！！！！！！！！！！！！！\n')

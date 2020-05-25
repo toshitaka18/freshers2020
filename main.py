@@ -1,6 +1,7 @@
-from message import Error_message, Thanks_message, Exit_message
+from message import Error_message, Thanks_message, Exit_message, Name_error_message
 from calc_number import Calc_sort
 from beans import Beans
+import random
 
 try:
     app_number = int(input('＊＊＊ プログラミング体験アプリへ ようこそ！＊＊＊ \n'
@@ -36,7 +37,32 @@ try:
         result_2 = app2.beans_sum(app2_string)
 
     elif app_number == 3:
-        print('今日の運勢プログラム')
+        print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
+              '今日の運勢プログラム\n'
+              '＊＊＊＊＊＊＊＊＊＊＊＊＊')
+
+        count_name = 0
+        while count_name < 3:
+            user_name = input('あなたの名前を入力してください。==> ')
+            if user_name:
+                break
+            else:
+                count_name += 1
+        if user_name:
+            lucky_number = random.randint(1, 11)
+            if lucky_number == 1:
+                print('{0}さんの運勢は、大吉です。おめでとうございます！'.format(user_name))
+            elif lucky_number == 2 or lucky_number == 3:
+                print('{0}さんの運勢は、吉です。'.format(user_name))
+            elif lucky_number == 4 or lucky_number == 5:
+                print('{0}さんの運勢は、小吉です。'.format(user_name))
+            elif lucky_number == 6:
+                print('{0}さんの運勢は、凶です。ファイト！'.format(user_name))
+            else:
+                print('{0}さんの運勢は、中吉です。'.format(user_name))
+            print(Thanks_message.statment)
+        else:
+            print(Name_error_message.statment)
     elif app_number == 4:
         print('電気自転車充電プログラム')
     elif app_number == 5:

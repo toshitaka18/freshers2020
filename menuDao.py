@@ -12,7 +12,7 @@ class MenuDao:
     def __init__(self):
 
         # MySQL接続
-        self.__conn = my.connect(user='root', password='xxxxxxxxx', database='freshers_schema', use_unicode=True, charset="utf8")
+        self.__conn = my.connect(user='root', password='freshers@2020', database='freshers_schema', use_unicode=True, charset="utf8")
 
     # メニューリストを取得する
     # MenuDtoクラスのリストを返却

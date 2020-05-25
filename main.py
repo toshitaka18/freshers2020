@@ -1,4 +1,5 @@
 from message import Error_message, Thanks_message
+from calc_number import Calc_sort
 
 try:
     app_number = int(input('＊＊＊ プログラミング体験アプリへ ようこそ！＊＊＊ \n'
@@ -10,7 +11,19 @@ try:
                            '9 : 処理終了 \n'
                            '実行したいプログラム番号を選択してください。(1-5,9)：'))
     if app_number == 1:
-        print('数字並べ替えプログラム')
+        print('＊＊＊＊＊＊＊＊＊＊＊\n'
+              '数字並べ替えプログラム\n'
+              '＊＊＊＊＊＊＊＊＊＊＊\n')
+        app1_string = input('昇順に並べ替えますか？ (y/n) ==>')
+        app1_amount = int(input('並べ替えしたい数字の数はいくつですか？(2-5)==> '))
+
+        app1 = Calc_sort()  # インスタンスの生成
+        result_1 = app1.sort_number(app1_string, app1_amount)  # 入力された値を引数として関数に渡し、戻り値を変数に代入。
+        if len(result_1) == 2:  # 戻り値の中身が二つあれば、それぞれ表示。そうでなければ1つだけ表示
+            print(result_1[0])
+            print(result_1[1])
+        else:
+            print(result_1)
     elif app_number == 2:
         print('節分豆まきプログラム')
     elif app_number == 3:
@@ -26,4 +39,4 @@ try:
 except:
     print(Error_message.statment)
 finally:
-    print(Thanks_message.statment)
+    print('またのご利用お待ちしております。\n')

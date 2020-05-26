@@ -44,10 +44,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TEST" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="freshers2020" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,9 +69,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="menuDao" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="freshers2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/menuDao.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.menuDao" />
       </list>
     </recent_temporary>
   </component>
@@ -100,42 +122,46 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="698" y="191" key="FileChooserDialogImpl" timestamp="1590126256502">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590468236559">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="698" y="191" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590126256502" />
-    <state width="1259" height="358" key="GridCell.Tab.0.bottom" timestamp="1590461802931">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1590468236559" />
+    <state x="698" y="191" key="FileChooserDialogImpl" timestamp="1590468722569">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="358" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590461802931" />
-    <state width="1259" height="358" key="GridCell.Tab.0.center" timestamp="1590461802931">
+    <state x="698" y="191" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590468722569" />
+    <state width="1259" height="339" key="GridCell.Tab.0.bottom" timestamp="1590479641244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="358" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590461802931" />
-    <state width="1259" height="358" key="GridCell.Tab.0.left" timestamp="1590461802931">
+    <state width="1259" height="339" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590479641244" />
+    <state width="1259" height="339" key="GridCell.Tab.0.center" timestamp="1590479641244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="358" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590461802931" />
-    <state width="1259" height="358" key="GridCell.Tab.0.right" timestamp="1590461802931">
+    <state width="1259" height="339" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590479641244" />
+    <state width="1259" height="339" key="GridCell.Tab.0.left" timestamp="1590479641244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="358" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590461802931" />
-    <state width="1259" height="204" key="GridCell.Tab.1.bottom" timestamp="1590460368617">
+    <state width="1259" height="339" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590479641244" />
+    <state width="1259" height="339" key="GridCell.Tab.0.right" timestamp="1590479641244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590460368617" />
-    <state width="1259" height="204" key="GridCell.Tab.1.center" timestamp="1590460368617">
+    <state width="1259" height="339" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590479641244" />
+    <state width="1259" height="204" key="GridCell.Tab.1.bottom" timestamp="1590468385118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590460368617" />
-    <state width="1259" height="204" key="GridCell.Tab.1.left" timestamp="1590460368617">
+    <state width="1259" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590468385118" />
+    <state width="1259" height="204" key="GridCell.Tab.1.center" timestamp="1590468385118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590460368617" />
-    <state width="1259" height="204" key="GridCell.Tab.1.right" timestamp="1590460368617">
+    <state width="1259" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590468385118" />
+    <state width="1259" height="204" key="GridCell.Tab.1.left" timestamp="1590468385118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590460368617" />
+    <state width="1259" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590468385118" />
+    <state width="1259" height="204" key="GridCell.Tab.1.right" timestamp="1590468385118">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590468385118" />
     <state x="190" y="0" key="SettingsEditor" timestamp="1590387816594">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -3,6 +3,11 @@ from calc_number import Calc_sort
 from beans import Beans
 from fortune import Fortune
 from ev_car import Ev_car
+import datetime
+
+from menuDao import MenuDao
+from menuDto import MenuDto
+from categoryDto import CategoryDto
 
 try:
     app_number = int(input('＊＊＊ プログラミング体験アプリへ ようこそ！＊＊＊ \n'
@@ -64,8 +69,8 @@ try:
             ev_wat = int(input('何キロワット充電しますか？==>'))
             #  201kw以上入力された場合はエラーメッセージを出力しプログラム終了
             if ev_wat <= 200:
-                app4 = Ev_car(ev_wat)  # インスタンス生成。今回は生成時に引数を渡す。
-                result_4 = app4.ev_charge()  # インスタンスメソッドによって得た戻り値をresult_4に代入。
+                app_4 = Ev_car(ev_wat)  # インスタンス生成。今回は生成時に引数を渡す。
+                result_4 = app_4.ev_charge()  # インスタンスメソッドによって得た戻り値をresult_4に代入。
             else:
                 print(Error_message.statment)
         elif app4_string == 'n':
@@ -75,7 +80,26 @@ try:
 
 
     elif app_number == 5:
-        print('中華料理注文プログラム')
+        print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
+              '中華料理注文プログラム\n'
+              '＊＊＊＊＊＊＊＊＊＊＊＊＊')
+        weekday = datetime.date.today().weekday()
+        days = ["月", "火", "水", "木", "金", "土", "日"]
+        print('いらっしゃいませ。 ==== メニューリスト ==== ')
+        app_5 = MenuDao()
+        result_5a = app_5.getAllMenus()
+
+        for i in range(len(result_5a)):
+            print('メニューNo.{0}[{1}]： {2} … {3}円 【{4}】'
+                  .format(result_5a[i].menuno, result_5a[i].categorynm, result_5a[i].itemnm, result_5a[i].price, result_5a[i].itemdesc))
+        print(' ')
+        result_5b = app_5.recommandedCategory()
+        print('==== 本日（{0}曜日）のおすすめは「{1}」です。===='.format(days[weekday], result_5b.categorynm))
+
+        app5_menu = input('ご注文はお決まりですか？メニュー番号を入力してください。==>')
+
+
+
     elif app_number == 9:
         print('プログラムを終了します')
     else:

@@ -9,7 +9,9 @@ class Thanks_message:
                "ご利用ありがとうございました。")
 
 class Exit_message:
-    statment = ('終了します')
+    statment = ('\n'
+                '終了します'
+                '\n')
 
 class Name_error_message:
     statment = ('！！！！！！！！！！！！！！！！！！！\n'

@@ -2,6 +2,7 @@ from message import Error_message, Thanks_message, Exit_message, Name_error_mess
 from calc_number import Calc_sort
 from beans import Beans
 from fortune import Fortune
+import math
 
 try:
     app_number = int(input('＊＊＊ プログラミング体験アプリへ ようこそ！＊＊＊ \n'
@@ -53,7 +54,31 @@ try:
         result_3 = app3.lucky(user_name)  # インスタンスメソッドによって得た戻り値をresult_3に代入
 
     elif app_number == 4:
-        print('電気自転車充電プログラム')
+        print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
+              '電気自動車充電プログラム\n'
+              '＊＊＊＊＊＊＊＊＊＊＊＊＊')
+        print('電気自転車「J-chary」は、1kwあたり1.5km走ることができます。 ')
+        app4_string = input('充電しますか？(y/n)==>  ')
+        if app4_string == 'y':
+            ev_wat = int(input('何キロワット充電しますか？==> '))
+            if ev_wat <= 200:
+                print('{0}キロワット、充電しました。'.format(ev_wat))
+                print('あなたの「J-chary」は、{0}km走ります。'.format(ev_wat * 1.5))
+                if ev_wat <= 30:
+                    total_fee = math.floor(ev_wat * 17.33)
+                elif ev_wat > 30 and ev_wat <= 80:
+                    total_fee = math.floor(ev_wat * 21.26)
+                elif ev_wat > 80 and ev_wat <= 100:
+                    total_fee = math.floor(ev_wat * 24.07)
+                else:
+                    total_fee = math.floor(ev_wat * 25.31)
+                print('充電にかかった費用は、{0}円です。'.format(total_fee))
+                print(Thanks_message.statment)
+            else:
+                print(Error_message.statment)
+        else:
+            print(Exit_message.statment)
+
     elif app_number == 5:
         print('中華料理注文プログラム')
     elif app_number == 9:

@@ -2,13 +2,14 @@ import math
 from message import Thanks_message
 
 class Ev_car():
-    def __init__(self, ev_wat):
+    def __init__(self, ev_wat):  # コンストラクタ使用
         self.ev_wat = ev_wat
 
     def ev_charge(self):
-        print(' ')
+        print(' ')  # 空行追加
         print('{0}キロワット、充電しました。'.format(self.ev_wat))
         print('あなたの「J-chary」は、{0}km走ります。'.format(self.ev_wat * 1.5))
+        #  入力されたワット数で場合分け。mathモジュールのfloorを使うことで小数点以下を切り捨てすることが出来る。
         if self.ev_wat <= 30:
             total_fee = math.floor(self.ev_wat * 17.33)
         elif self.ev_wat > 30 and self.ev_wat <= 80:

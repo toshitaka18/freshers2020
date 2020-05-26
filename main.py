@@ -59,11 +59,13 @@ try:
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
         print('電気自転車「J-chary」は、1kwあたり1.5km走ることができます。 ')
         app4_string = input('充電しますか？(y/n)==>')
+        # 'y'が入力された場合、'n'が入力された場合とそれ以外で場合分け
         if app4_string == 'y':
             ev_wat = int(input('何キロワット充電しますか？==>'))
+            #  201kw以上入力された場合はエラーメッセージを出力しプログラム終了
             if ev_wat <= 200:
-                app4 = Ev_car(ev_wat)
-                result_4 = app4.ev_charge()
+                app4 = Ev_car(ev_wat)  # インスタンス生成。今回は生成時に引数を渡す。
+                result_4 = app4.ev_charge()  # インスタンスメソッドによって得た戻り値をresult_4に代入。
             else:
                 print(Error_message.statment)
         elif app4_string == 'n':

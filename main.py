@@ -32,8 +32,9 @@ try:
               '節分豆まきプログラム\n'
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
         app2_string = input('今日は節分ですか？(y/n)==>')
-        app2 = Beans()
-        result_2 = app2.beans_sum(app2_string)
+
+        app2 = Beans()  # インスタンスの生成し変数に代入
+        result_2 = app2.beans_sum(app2_string)  # インスタンスメソッドによって得た戻り値をresult_2に代入
 
     elif app_number == 3:
         print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'

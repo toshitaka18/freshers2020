@@ -32,7 +32,6 @@ try:
               '節分豆まきプログラム\n'
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
         app2_string = input('今日は節分ですか？(y/n)==>')
-
         app2 = Beans()
         result_2 = app2.beans_sum(app2_string)
 

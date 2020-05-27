@@ -12,9 +12,18 @@ class Chinese_food:
         print('いらっしゃいませ。 ==== メニューリスト ==== ')
 
         for i in range(len(self.result_5a)):
-            print('メニューNo.{0}[{1}]： {2} … {3}円 【{4}】'
-                  .format(self.result_5a[i].menuno, self.result_5a[i].categorynm, self.result_5a[i].itemnm,
-                          self.result_5a[i].price,self.result_5a[i].itemdesc))
+            if i == 6:
+                print('メニューNo.{0}[{1}]：  {2} … {3}円 【{4}】'
+                      .format(self.result_5a[i].menuno, self.result_5a[i].categorynm, self.result_5a[i].itemnm,
+                              self.result_5a[i].price, self.result_5a[i].itemdesc))
+            elif i == 1 or i == 5:
+                print('メニューNo.{0}[{1}]：    {2} … {3}円 【{4}】'
+                      .format(self.result_5a[i].menuno, self.result_5a[i].categorynm, self.result_5a[i].itemnm,
+                              self.result_5a[i].price, self.result_5a[i].itemdesc))
+            else:
+                print('メニューNo.{0}[{1}]：     {2} … {3}円 【{4}】'
+                      .format(self.result_5a[i].menuno, self.result_5a[i].categorynm, self.result_5a[i].itemnm,
+                              self.result_5a[i].price, self.result_5a[i].itemdesc))
 
         print(' ')
         print('==== 本日（{0}曜日）のおすすめは「{1}」です。===='.format(days[today], self.result_5b.categorynm))

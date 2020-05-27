@@ -4,11 +4,7 @@ from beans import Beans
 from fortune import Fortune
 from ev_car import Ev_car
 from chinese_food import Chinese_food
-import datetime
-
 from menuDao import MenuDao
-from menuDto import MenuDto
-from categoryDto import CategoryDto
 
 try:
     app_number = int(input('＊＊＊ プログラミング体験アプリへ ようこそ！＊＊＊ \n'
@@ -98,7 +94,7 @@ try:
         print('プログラムを終了します')
     else:
         print(Error_message.statment)
-except:
+except Error_message:
     print(Error_message.statment)
 finally:
     print('またのご利用お待ちしております。\n')

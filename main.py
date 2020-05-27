@@ -83,7 +83,7 @@ try:
         print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
               '中華料理注文プログラム\n'
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
-        weekday = datetime.date.today().weekday()
+        today = datetime.date.today().weekday()
         days = ["月", "火", "水", "木", "金", "土", "日"]
         print('いらっしゃいませ。 ==== メニューリスト ==== ')
         app_5 = MenuDao()
@@ -94,10 +94,29 @@ try:
                   .format(result_5a[i].menuno, result_5a[i].categorynm, result_5a[i].itemnm, result_5a[i].price, result_5a[i].itemdesc))
         print(' ')
         result_5b = app_5.recommandedCategory()
-        print('==== 本日（{0}曜日）のおすすめは「{1}」です。===='.format(days[weekday], result_5b.categorynm))
+        print('==== 本日（{0}曜日）のおすすめは「{1}」です。===='.format(days[today], result_5b.categorynm))
 
         app5_menu = input('ご注文はお決まりですか？メニュー番号を入力してください。==>')
 
+        if app5_menu == '11':
+            app5_menu = 0
+        elif app5_menu == '21':
+            app5_menu = 1
+        elif app5_menu == '31':
+            app5_menu = 2
+        elif app5_menu == '41':
+            app5_menu = 3
+        elif app5_menu == '51':
+            app5_menu = 4
+        elif app5_menu == '61':
+            app5_menu = 5
+        elif app5_menu == '71':
+            app5_menu = 6
+        else:
+            print('！！！！！！！！！！！！！！！！！！！！！！！！\n'
+                  '入力されたメニュー番号は存在しません。メニュー番号＝{0}'.format(str(app5_menu)))
+            print('！！！！！！！！！！！！！！！！！！！！！！！！')
+            exit()
 
 
     elif app_number == 9:

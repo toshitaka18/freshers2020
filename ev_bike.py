@@ -1,7 +1,7 @@
 import math
 from message import Thanks_message
 
-class Ev_car():
+class Ev_bike():
     def __init__(self, ev_wat):  # コンストラクタ使用
         self.ev_wat = ev_wat
 

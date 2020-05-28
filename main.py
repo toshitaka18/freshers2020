@@ -2,7 +2,7 @@ from message import Error_message, Thanks_exit, Exit_message
 from calc_number import Calc_sort
 from beans import Beans
 from fortune import Fortune
-from ev_car import Ev_car
+from ev_bike import Ev_bike
 from chinese_food import Chinese_food
 from menuDao import MenuDao
 
@@ -23,12 +23,7 @@ try:
         app1_amount = int(input('並べ替えしたい数字の数はいくつですか？(2-5)==> '))
 
         app1 = Calc_sort()  # インスタンスの生成し変数に代入
-        result_1 = app1.sort_number(app1_string, app1_amount)  # インスタンスメソッドによって得た戻り値をresult_1に代入
-        # if len(result_1) == 2:  # 戻り値の中身が二つあれば、それぞれ表示。そうでなければ1つだけ表示
-            # print(result_1[0])
-            # print(result_1[1])
-        # else:
-            # print(result_1)
+        app1.sort_number(app1_string, app1_amount)  # インスタンスメソッドによって得た戻り値をresult_1に代入
 
     elif app_number == 2:
         print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
@@ -37,7 +32,7 @@ try:
         app2_string = input('今日は節分ですか？(y/n)==>')
 
         app2 = Beans()  # インスタンスの生成し変数に代入
-        result_2 = app2.beans_sum(app2_string)  # インスタンスメソッドによって得た戻り値をresult_2に代入
+        app2.beans_sum(app2_string)  # インスタンスメソッドによって得た戻り値をresult_2に代入
 
     elif app_number == 3:
         print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
@@ -53,7 +48,7 @@ try:
                 count_name += 1  # 名前が入力されない場合はカウントを１増やす
 
         app3 = Fortune()  # インスタンスの生成し変数に代入
-        result_3 = app3.lucky(user_name)  # インスタンスメソッドによって得た戻り値をresult_3に代入
+        app3.lucky(user_name)  # インスタンスメソッドによって得た戻り値をresult_3に代入
 
     elif app_number == 4:
         print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
@@ -66,17 +61,14 @@ try:
             ev_wat = int(input('何キロワット充電しますか？==>'))
             #  201kw以上入力された場合はエラーメッセージを出力しプログラム終了
             if ev_wat <= 200:
-                app_4 = Ev_car(ev_wat)  # インスタンス生成。今回は生成時に引数を渡す。
-                result_4 = app_4.ev_charge()  # インスタンスメソッドによって得た戻り値をresult_4に代入。
+                app_4 = Ev_bike(ev_wat)  # インスタンス生成。今回は生成時に引数を渡す。
+                app_4.ev_charge()  # インスタンスメソッドによって得た戻り値をresult_4に代入。
             else:
                 print(Error_message.statment)
                 print(Thanks_exit.statment)
-        elif app4_string == 'n':
+        else:
             print('')
             print(Exit_message.statment)
-            print(Thanks_exit.statment)
-        else:
-            print(Error_message.statment)
             print(Thanks_exit.statment)
 
 
@@ -90,13 +82,14 @@ try:
         result_5b = app_5.recommandedCategory()
         main_chinese = Chinese_food(result_5a, result_5b)  # Chinese_foodのインスタンスを生成。生成時、上記取得内容を引数として設定。
 
-        app5_menu = input('ご注文はお決まりですか？メニュー番号を入力してください。==>')
-        result_5 = main_chinese.order(app5_menu)  # 引数としてメニュー番号を関数へ渡す。インスタンスメソッドによって得た戻り値をresult_5に代入。
+        main_chinese.order()  # インスタンスメソッドによって得た戻り値をresult_5に代入。
 
 
     elif app_number == 9:
+        print('')
         print(Thanks_exit.statment)
-    else:
+
+    else:  # 数字の入力ではあるが1~5,9以外の処理
         print(Error_message.statment)
         print(Thanks_exit.statment)
 except:

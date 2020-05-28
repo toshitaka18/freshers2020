@@ -28,19 +28,24 @@ class Beans():
                         break
                     else:
                         continue
-                #  200粒の判定のために、再度forを回す。
-                count_beans1 = 0
-                for name2, age2 in zip(names, ages):
-                    count_beans1 += age2
-                    if count_beans1 >= 200:  # 合計が200粒を超えた時点でループを抜ける。
-                        print('200粒目の豆を食べたひとは、{0}です。 '.format(name2))
-                        break
-                    else:
-                        continue
+                if count_beans < 200:  # 粒数合計が200未満の場合のメッセージを表示。
+                    print('200粒目の豆を食べたひとはいません。')
+                else:
+                    #  200粒の判定のために、再度forを回す。
+                    count_beans1 = 0
+                    for name2, age2 in zip(names, ages):
+                        count_beans1 += age2
+                        if count_beans1 >= 200:  # 合計が200粒を超えた時点でループを抜ける。
+                            print('200粒目の豆を食べたひとは、{0}です。 '.format(name2))
+                            break
+                        else:
+                            continue
 
             print('家族全員で食べた豆の数は{0}粒です。'.format(total_beans))
             print(Thanks_message.statment)
         elif app2_string == 'n':
             print(Exit_message.statment)
+            print(Thanks_message.statment)
         else:
             print(Error_message.statment)
+            print('またのご利用をお待ちしております。\n')

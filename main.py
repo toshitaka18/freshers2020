@@ -1,4 +1,4 @@
-from message import Error_message, Thanks_message, Exit_message, Name_error_message
+from message import Error_message, Thanks_exit, Exit_message
 from calc_number import Calc_sort
 from beans import Beans
 from fortune import Fortune
@@ -24,11 +24,11 @@ try:
 
         app1 = Calc_sort()  # インスタンスの生成し変数に代入
         result_1 = app1.sort_number(app1_string, app1_amount)  # インスタンスメソッドによって得た戻り値をresult_1に代入
-        if len(result_1) == 2:  # 戻り値の中身が二つあれば、それぞれ表示。そうでなければ1つだけ表示
-            print(result_1[0])
-            print(result_1[1])
-        else:
-            print(result_1)
+        # if len(result_1) == 2:  # 戻り値の中身が二つあれば、それぞれ表示。そうでなければ1つだけ表示
+            # print(result_1[0])
+            # print(result_1[1])
+        # else:
+            # print(result_1)
 
     elif app_number == 2:
         print('＊＊＊＊＊＊＊＊＊＊＊＊＊\n'
@@ -70,10 +70,14 @@ try:
                 result_4 = app_4.ev_charge()  # インスタンスメソッドによって得た戻り値をresult_4に代入。
             else:
                 print(Error_message.statment)
+                print(Thanks_exit.statment)
         elif app4_string == 'n':
+            print('')
             print(Exit_message.statment)
+            print(Thanks_exit.statment)
         else:
             print(Error_message.statment)
+            print(Thanks_exit.statment)
 
 
     elif app_number == 5:
@@ -91,10 +95,10 @@ try:
 
 
     elif app_number == 9:
-        print('プログラムを終了します')
+        print(Thanks_exit.statment)
     else:
         print(Error_message.statment)
+        print(Thanks_exit.statment)
 except:
     print(Error_message.statment)
-finally:
-    print('またのご利用お待ちしております。\n')
+    print(Thanks_exit.statment)

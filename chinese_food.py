@@ -25,7 +25,8 @@ class Chinese_food:
     def order(self, app5_menu):  # メニューの受付
         #  入力されたメニュー番号を整数の0~6に直す。それ以外はエラー処理
         #  扱いやすい数字に直す以外現時点では方法が思いつかず。修正の余地あり。
-        if app5_menu == '11' or app5_menu == '21' or app5_menu == '31' or app5_menu == '41' or app5_menu == '51' or app5_menu == '61' or app5_menu == '71':
+        if app5_menu == '11' or app5_menu == '21' or app5_menu == '31' or app5_menu == '41'\
+                or app5_menu == '51' or app5_menu == '61' or app5_menu == '71':
             if app5_menu == '11':
                 app5_menu = 0
             elif app5_menu == '21':
@@ -46,7 +47,6 @@ class Chinese_food:
                   '！！！！！！！！！！！！！！！！！！！！！！！！'.format(app5_menu))
         # 入力されたメニュー番号（0~6に直したもの）と曜日の数値が一致すれば1割引きを行う。
         if app5_menu == today:
-            print(' ')
             print('\n==== ご注文内容は以下の通りです。 ==== \n'
                   'メニュー番号：{0}\n注文名：{1}\n価格：{2}円'
                   .format(self.result_5a[app5_menu].menuno, self.result_5a[app5_menu].itemnm,
@@ -54,8 +54,7 @@ class Chinese_food:
             print('※本日おすすめは1割引きです！ \n''==== ご注文を承りました。 ====')
             print(Thanks_message.statment)
         else:
-            print(' ')
-            print('==== ご注文内容は以下の通りです。 ==== \n'
+            print('\n==== ご注文内容は以下の通りです。 ==== \n'
                   'メニュー番号：{0}\n注文名：{1}\n価格：{2}円'
                   .format(self.result_5a[app5_menu].menuno, self.result_5a[app5_menu].itemnm,
                           self.result_5a[app5_menu].price))

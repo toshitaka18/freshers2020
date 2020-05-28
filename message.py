@@ -6,7 +6,7 @@ class Error_message(Exception):
 
 class Thanks_message:
     statment = ("\n" 
-               "ご利用ありがとうございました。")
+               "ご利用、ありがとうございました。")
 
 class Exit_message(Exception):
     statment = ('\n'

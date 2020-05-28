@@ -81,20 +81,20 @@ try:
               '中華料理注文プログラム\n'
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
 
-        app_5 = MenuDao()
-        result_5a = app_5.getAllMenus()
+        app_5 = MenuDao()  # MenuDaoのインスタンス生成
+        result_5a = app_5.getAllMenus()  # getAllMenus()でメニューリスト、recommandedCategory()で本日のおすすめを取得。取得内容を変数へ代入。
         result_5b = app_5.recommandedCategory()
-        main_chinese = Chinese_food(result_5a, result_5b)
+        main_chinese = Chinese_food(result_5a, result_5b)  # Chinese_foodのインスタンスを生成。生成時、上記取得内容を引数として設定。
 
         app5_menu = input('ご注文はお決まりですか？メニュー番号を入力してください。==>')
-        result_5 = main_chinese.order(app5_menu)
+        result_5 = main_chinese.order(app5_menu)  # 引数としてメニュー番号を関数へ渡す。インスタンスメソッドによって得た戻り値をresult_5に代入。
 
 
     elif app_number == 9:
         print('プログラムを終了します')
     else:
         print(Error_message.statment)
-except Error_message:
+except:
     print(Error_message.statment)
 finally:
     print('またのご利用お待ちしております。\n')

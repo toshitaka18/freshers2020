@@ -10,7 +10,7 @@ class Chinese_food:
         self.result_5a = result_5a
         self.result_5b = result_5b
         print('  いらっしゃいませ。 ==== メニューリスト ==== ')
-        # for文を使用し、メニューリストを順に表示。メニュー名の縦列を揃えるために、iの数値によって空白の数を変更している。改善の余地あり。
+        # for文を使用し、メニューリストを順に表示。メニュー名の縦列を揃えるために、iの数値によって空白の数を変更しているが揃わず。改善の余地あり。
         for i in range(len(self.result_5a)):
             if i == 6:
                 print('メニューNo.%s[%s]： %s … %s円 【%s】' % (self.result_5a[i].menuno, self.result_5a[i].categorynm, self.result_5a[i].itemnm,self.result_5a[i].price, self.result_5a[i].itemdesc))
@@ -47,14 +47,14 @@ class Chinese_food:
             # 入力されたメニュー番号（0~6に直したもの）と曜日の数値が一致すれば1割引きを行う。
             if app5_menu == today:
                 print('\n==== ご注文内容は以下の通りです。 ==== \n'
-                      'メニュー番号：{0}\n注文名：{1}\n価格：{2}円'
+                      'メニュー番号：{0}\n注文名：{1}\n価格：{2:,}円'
                       .format(self.result_5a[app5_menu].menuno, self.result_5a[app5_menu].itemnm,
                               round(self.result_5a[app5_menu].price * 0.9)))
                 print('※本日おすすめは1割引きです！ \n''==== ご注文を承りました。 ====')
                 print(Thanks_message.statment)
             else:
                 print('\n==== ご注文内容は以下の通りです。 ==== \n'
-                      'メニュー番号：{0}\n注文名：{1}\n価格：{2}円'
+                      'メニュー番号：{0}\n注文名：{1}\n価格：{2:,}円'
                       .format(self.result_5a[app5_menu].menuno, self.result_5a[app5_menu].itemnm,
                               self.result_5a[app5_menu].price))
                 print('==== ご注文を承りました。 ====')

@@ -5,7 +5,7 @@ from fortune import Fortune
 from ev_bike import Ev_bike
 from chinese_food import Chinese_food
 from menuDao import MenuDao
-from script import *
+from monster import *
 
 try:
     app_number = int(input('＊＊＊ プログラミング体験アプリへ ようこそ！＊＊＊ \n'
@@ -80,9 +80,9 @@ try:
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
 
         app_5 = MenuDao()  # MenuDaoのインスタンス生成
-        result_5a = app_5.getAllMenus()  # getAllMenus()でメニューリスト、recommandedCategory()で本日のおすすめを取得。取得内容を変数へ代入。
-        result_5b = app_5.recommandedCategory()
-        main_chinese = Chinese_food(result_5a, result_5b)  # Chinese_foodのインスタンスを生成。生成時、上記取得内容を引数として設定。
+        all_menu = app_5.getAllMenus()  # getAllMenus()でメニューリスト、recommandedCategory()で本日のおすすめを取得。取得内容を変数へ代入。
+        recommend_menu = app_5.recommandedCategory()
+        main_chinese = Chinese_food(all_menu, recommend_menu)  # Chinese_foodのインスタンスを生成。生成時、上記取得内容を引数として設定。
 
         main_chinese.order()  # インスタンスに対してインスタンスメソッドを使用。
 
@@ -91,6 +91,7 @@ try:
               'モンスタープログラム\n'
               '＊＊＊＊＊＊＊＊＊＊＊＊＊')
         start_flag = int(input("冒険を始めますか?:[1:始める/0:やめる]:"))
+        #  1以外の場合はプログラムを終了させる。
         if start_flag != 1:
             print('')
             print(Exit_message.statment)
@@ -114,17 +115,19 @@ try:
             ene_spd = enemy_info[3]
             ene_ev = enemy_info[4]
 
-            while True:
+            while True:  # 2の場合はモンスター情報を表示し選択画面に戻る。0の場合は終了。0~2以外の値は全て例外処理でエラー文表示
                 select_mode = int(input("[1:冒険に出かける/2:モンスターの状態を知る/0:休息を取る]:"))
                 if select_mode == 0:
                     print('')
                     print(Exit_message.statment)
                     print(Thanks_exit.statment)
                     break
-                if select_mode == 2:
+                elif select_mode == 2:
                     show_player(player_info)
                 else:
-                    # 攻撃の順番
+                    for i in range(1, 5):  # "."が1秒ごとに表示され4秒後にモンスター出現
+                        print(".")
+                        sleep(1)  # 処理を1秒遅らせることが出来る
                     print("野生の{0}があらわれた!".format(ene_name))
                     # 戦闘開始
                     while ply_hp > 0 and ene_hp > 0:
@@ -147,7 +150,7 @@ try:
 
                         # 1秒待って戦闘ログを出力
                         sleep(1)
-                    player_win_flag = judge(ply_hp, ene_hp)
+                    player_win_flag = judge(ply_hp)  # judgeメソッドを使用し、ply_hpが0以上であればTrue、それ以外はFalseの戻り値を得る
                     # ゲーム判定
                     if player_win_flag:
                         print("{0}を倒した！おめでとう!{1}は経験値を{2}得た！".format(ene_name,ply_name, ene_ev))

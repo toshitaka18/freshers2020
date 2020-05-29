@@ -18,5 +18,5 @@ class Ev_bike():
             total_fee = math.floor(self.ev_wat * 24.07)
         else:
             total_fee = math.floor(self.ev_wat * 25.31)
-        print('充電にかかった費用は、{0}円です。'.format(total_fee))
+        print('充電にかかった費用は、{:,}円です。'.format(total_fee))
         print(Thanks_message.statment)

@@ -16,7 +16,7 @@ class Calc_sort:
                     print('昇順に並び替えます')
                     app1_list.sort()  # sortで昇順に並び替える。返される値はNone、なので結果を表示するにはprint(list名)
                     print(app1_list)
-                    print(Thanks_message.statment)  # 並び替え結果とメッセージを戻り値として返す。
+                    print(Thanks_message.statment)  # 並び替え結果とメッセージを表示。
 
                 else:
                     print('降順に並び替えます')

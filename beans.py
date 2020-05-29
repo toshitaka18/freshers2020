@@ -30,7 +30,7 @@ class Beans():
                             break
                         else:
                             continue
-                    if count_beans < 200:  # 粒数合計が200未満の場合のメッセージを表示。
+                    if total_beans < 200:  # 粒数合計が200未満の場合のメッセージを表示。
                         print('200粒目の豆を食べたひとはいません。')
                     else:
                         #  200粒の判定のために、再度forを回す。

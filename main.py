@@ -104,8 +104,6 @@ try:
             ply_atk = player_info[1]
             ply_spd = player_info[2]
             ply_name = player_info[3]
-
-
             # 敵情報生成
             enemy_info = set_enemy()
             # 敵情報の取得
@@ -130,7 +128,7 @@ try:
                         sleep(1)  # 処理を1秒遅らせることが出来る
                     print("野生の{0}があらわれた!".format(ene_name))
                     # 戦闘開始
-                    while ply_hp > 0 and ene_hp > 0:
+                    while ply_hp > 0 and ene_hp > 0:  # どちらか一方のHPがゼロ以下になるまで戦闘を続ける。
                         if ply_spd > ene_spd:  # スピードの早いほうが先に攻撃
                             #  主人公のモンスターの攻撃
                             total_atk = calc_dmg(ply_atk, ply_name, ene_name)

@@ -21,7 +21,7 @@ class Beans():
                     print('100粒目の豆を食べたひとはいません。')
                     print('200粒目の豆を食べたひとはいません。')
                 else:
-                    #  100粒の判定のために、再度forを回す。
+                    #  100粒目の判定のために、再度forを回す。
                     count_beans = 0
                     for name1, age1 in zip(names, ages):
                         count_beans += age1
@@ -32,8 +32,7 @@ class Beans():
                             continue
                     if total_beans < 200:  # 粒数合計が200未満の場合のメッセージを表示。
                         print('200粒目の豆を食べたひとはいません。')
-                    else:
-                        #  200粒の判定のために、再度forを回す。
+                    else:  # 合計が200粒以上であれば、200粒目の判定のために、再度forを回す。
                         count_beans1 = 0
                         for name2, age2 in zip(names, ages):
                             count_beans1 += age2
